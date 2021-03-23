@@ -1,8 +1,3 @@
-// JavaScript source code
-
-
-
-
 function square(x) {
     alert("Enter a number!");
     let result = Number(prompt("Enter the number here."));
