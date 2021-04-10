@@ -8,7 +8,7 @@ function bankPrompt() {
         case "Q":
             return;
         case "W":
-             makeWithdrawal();
+            makeWithdrawal();
             break;
         case "D":
             makeDeposit();
@@ -23,11 +23,10 @@ function bankPrompt() {
 }
 
 function makeDeposit() {
-    var dep = Number(prompt("Please enter the amount you will deposit."));
+    var dep = prompt("Please enter the amount you will deposit.");
     if (Number.isNaN(Number(dep))) {
         return;
     }
-    if ()
     account += Number(dep);
 }
 
