@@ -43,7 +43,7 @@ function makeWithdrawal() {
         return;
     }
     else if (account - Number(wd) < 300) {
-        var ans = prompt("Low balance alert. This withdrawl will leave your account with less than $300. Please enter C to confirm this withdraw");
+        var ans = prompt("Low balance alert. This withdrawl will leave your account with less than $300. Please enter C to confirm this withdrawl.");
         if (ans == 'C') {
             alert("Your withdrawl is confirmed.");
         }
