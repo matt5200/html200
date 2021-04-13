@@ -27,6 +27,9 @@ function makeDeposit() {
     if (Number.isNaN(Number(dep))) {
         return;
     }
+    if (Number(dep)>50000) {
+        alert("Your deposit cap is 50,000. Please enter a value less than your cap.");
+    }
     account += Number(dep);
 }
 
@@ -34,6 +37,20 @@ function makeWithdrawal() {
     var wd = prompt("Please enter the amount you will withdraw.");
     if (Number.isNaN(Number(wd))) {
         return;
+    }
+    else if (account < Number(wd)) {
+        alert("Your account has insufficient funds to withdraw that amount.");
+        return;
+    }
+    else if (account - Number(wd) < 300) {
+        var ans = prompt("Low balance alert. This withdrawl will leave your account with less than $300. Please enter C to confirm this withdraw");
+        if (ans == 'C') {
+            alert("Your withdrawl is confirmed.");
+        }
+        else {
+            alert("Your withdrawl was cancelled.");
+            return;
+        }
     }
     account -= Number(wd);
 }
