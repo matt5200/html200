@@ -14,7 +14,7 @@ function bankPrompt() {
             makeDeposit();
             break;
         case "B":
-            alert("Your account has a balance of $" + account);
+            alert("Your account balance is $" + account);
             break;
         default:
             alert("Please enter one of the supported commands.");
