@@ -29,6 +29,7 @@ function makeDeposit() {
     }
     if (Number(dep)>50000) {
         alert("Your deposit cap is $50,000. Please enter a value less than your cap.");
+        return;
     }
     account += Number(dep);
 }
